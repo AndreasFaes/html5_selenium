@@ -5,6 +5,14 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+/**
+ * Basic implementation for the Details interface.
+ * I think it's good enough, but have relied on the implementation
+ * of Google (and not the W3C spec).
+ * 
+ * @author afaes
+ *
+ */
 public class HTML5Details implements Details{
 	private WebElement details;
 

@@ -11,14 +11,20 @@ import org.openqa.selenium.WebDriver;
 import ui.HTML5Meter;
 import ui.Meter;
 
+/**
+ * Test class for the <meter> tag.
+ * 
+ * @author afaes
+ *
+ */
 public class DemoMeter {
 
 	@Test
 	public void test() throws InterruptedException {
 		WebDriver driver = ChromeManager.getDriver();
 		
-		// Go to slide 32 (the demo slide)
-		driver.get(SlideDeck.slide(32));
+		// Go to slide 33 (the demo slide)
+		driver.get(SlideDeck.slide(33));
 		
 		// Create the Meter objects
 		Meter meter1 = new HTML5Meter(driver.findElement(By.id("meter1")));

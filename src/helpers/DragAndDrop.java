@@ -7,7 +7,26 @@ import java.io.IOException;
 
 import org.openqa.selenium.JavascriptExecutor;
 
+/**
+ * Convenience class which handles the Drag 
+ * and Drop functionality through JavaScript.
+ * 
+ * @author afaes
+ *
+ */
 public class DragAndDrop {
+	/**
+	 * Performs the drag and drop by 
+	 * a) injecting the JavaScript function which
+	 * 		simulates the drag and drop
+	 * b) using that function with the id's
+	 * 
+	 * Needs to be more generic in a project environment,
+	 * but for the presentation id's were sufficient.
+	 * 
+	 * @param idFrom id of the element to drag
+	 * @param idTo id of the element to drop on
+	 */
 	public static void perform(String idFrom, String idTo) {
 		injectJavaScriptFunction();		 
 		useFunction(idFrom, idTo);

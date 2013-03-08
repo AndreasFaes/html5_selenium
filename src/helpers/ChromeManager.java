@@ -10,24 +10,32 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ChromeManager {
 	private static WebDriver driver;
 	
+	/**
+	 * Creates and maintains the WebDriver instance
+	 * (in this case ChromeDriver, fullscreen).
+	 * 
+	 * @return ChromeDriver instance
+	 */
 	public static WebDriver getDriver(){
 		if(driver == null){
 			System.setProperty("webdriver.chrome.driver",
 					"C:\\Selenium\\chromedriver.exe");
 			driver = new ChromeDriver();
-			
-			// F11 that guy
-			Robot robby = null;
-			try {
-				robby = new Robot();
-			} catch (AWTException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			robby.keyPress(KeyEvent.VK_F11);
-			robby.keyRelease(KeyEvent.VK_F11);
+			fullscreen();	
 		}
 		
 		return driver;
+	}
+	
+	private static void fullscreen(){
+		Robot robby = null;
+		try {
+			robby = new Robot();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		robby.keyPress(KeyEvent.VK_F11);
+		robby.keyRelease(KeyEvent.VK_F11);
 	}
 }

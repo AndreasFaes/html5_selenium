@@ -11,14 +11,23 @@ import org.openqa.selenium.WebDriver;
 import ui.Details;
 import ui.HTML5Details;
 
+/**
+ * Test class for the <details> tag.
+ * 
+ * Demonstrates the usage of abstractions for new
+ * HTML5 classes (if you want to test those in full).
+ * 
+ * @author afaes
+ *
+ */
 public class DemoDetails {
 
 	@Test
 	public void test() throws InterruptedException {
 		WebDriver driver = ChromeManager.getDriver();
 
-		// Go to slide 32 (the demo slide)
-		driver.get(SlideDeck.slide(36));
+		// Go to slide 37 (the demo slide)
+		driver.get(SlideDeck.slide(37));
 
 		// Create the Details objects
 		Details details1 = new HTML5Details(driver.findElement(By.id("details1")));

@@ -15,14 +15,23 @@ import org.openqa.selenium.WebElement;
 
 import com.gargoylesoftware.htmlunit.javascript.host.MouseEvent;
 
+/**
+ * Test class for the Interactive canvas.
+ * 
+ * Uses robot to do the spinning and relies on
+ * hooks in JavaScript to get the rest done.
+ * 
+ * @author afaes
+ *
+ */
 public class DemoInteractiveCanvas {
 
 	@Test
 	public void test() throws InterruptedException, AWTException {
 		WebDriver driver = ChromeManager.getDriver();
 
-		// Go to slide 50 (the demo slide)
-		driver.get(SlideDeck.slide(50));
+		// Go to slide 51 (the demo slide)
+		driver.get(SlideDeck.slide(51));
 		driver.findElement(By.id("container")).click();
 		WebElement canvas = driver
 				.findElement(By.cssSelector("#test > canvas"));

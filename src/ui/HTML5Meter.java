@@ -2,6 +2,16 @@ package ui;
 
 import org.openqa.selenium.WebElement;
 
+/**
+ * Basic implementation of the Meter interface.
+ * 
+ * Blatantly disregards all other uses, I just assume
+ * that there will be a value (and no min/max stuff). Check the
+ * W3C spec if you want to create a good reusable abstraction.
+ * 
+ * @author afaes
+ *
+ */
 public class HTML5Meter implements Meter {
 	private WebElement meter;
 	public HTML5Meter(WebElement meter){
